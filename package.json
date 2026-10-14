@@ -1,0 +1,28 @@
+{
+  "name": "serviceflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant SaaS platform for service businesses",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lytvyshko/ServiceFlow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lytvyshko/ServiceFlow/issues"
+  },
+  "homepage": "https://github.com/lytvyshko/ServiceFlow#readme",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run start:dev --workspace=apps/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:api": "npm run build --workspace=apps/api",
+    "format": "prettier --write \"apps/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"apps/**/*.{js,jsx,ts,tsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}
